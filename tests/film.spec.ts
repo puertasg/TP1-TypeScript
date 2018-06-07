@@ -11,8 +11,8 @@ let actors: string[] = [
     "Ty Olsson",
     "Sarah Smyth"
 ]
-let trailers: Array<Trailer> = [new Trailer("Mon, 27 Jul 2015 00:00:00 -0700", "/trailers/lions_gate/12rounds3lockdown/", "Trailer", false, true)];
-let film: Film = new Film("12 Rounds 3: Lockdown", "Fri, 11 Sep 2015 00:00:00 -0700", "Lionsgate", "http://trailers.apple.com/trailers/lions_gate/12rounds3lockdown/images/poster.jpg", "/trailers/lions_gate/12rounds3lockdown/", "R", genre, "Stephen Reynolds", actors, trailers);
+let trailers: Array<Trailer> = [new Trailer(new Date('July 27, 2015'), "/trailers/lions_gate/12rounds3lockdown/", "Trailer", false, true)];
+let film: Film = new Film("12 Rounds 3: Lockdown", new Date('September 11, 2015'), "Lionsgate", "http://trailers.apple.com/trailers/lions_gate/12rounds3lockdown/images/poster.jpg", "/trailers/lions_gate/12rounds3lockdown/", "R", genre, "Stephen Reynolds", actors, trailers);
 
 describe('Film', () => {
     it('Should have 6 actors', () => {

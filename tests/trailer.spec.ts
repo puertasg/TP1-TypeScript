@@ -1,11 +1,10 @@
 import { Trailer } from "../classes/Trailer";
 import * as assert from "chai";
 
-let trailer: Trailer = new Trailer("post date", "url ici", "type ici", true, false);
-
+let trailer: Trailer = new Trailer(new Date('December 17, 1995'), "url ici", "type ici", true, false);
 describe("Trailer", () => {
-    it("Post date should be post date", () => {
-        assert.expect(trailer.postdate).to.equal("post date");
+    it("Post date should be Sun Dec 17 1995", () => {
+        assert.expect(trailer.postdate.toDateString()).to.equal("Sun Dec 17 1995");
     });
 
     it("URL should be url ici", () => {

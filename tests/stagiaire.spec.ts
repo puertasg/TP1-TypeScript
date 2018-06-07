@@ -2,8 +2,8 @@ import { Certification } from "../classes/Certification";
 import { Stagiaire } from "../classes/Stagiaire";
 import * as assert from "chai";
 
-let certification: Certification = new Certification("Un diplôme", "2018");
-let certification2: Certification = new Certification("Un deuxième diplôme", "2017");
+let certification: Certification = new Certification("Un diplôme", new Date('December 17, 2018 03:24:00'));
+let certification2: Certification = new Certification("Un deuxième diplôme", new Date('December 17, 2017 03:24:00'));
 
 let listeCertifications: Array<Certification> = [certification, certification2];
 let stagiaire: Stagiaire = new Stagiaire("N stagiaire", "P stagiaire", false, listeCertifications);

@@ -5,8 +5,8 @@ import { Formateur } from "../classes/Formateur";
 import { Connaissance } from "../classes/Connaissance";
 import * as assert from "chai";
 
-let certification: Certification = new Certification("Un diplôme", "2018");
-let certification2: Certification = new Certification("Un deuxième diplôme", "2017");
+let certification: Certification = new Certification("Un diplôme", new Date('December 17, 2018'));
+let certification2: Certification = new Certification("Un deuxième diplôme", new Date('December 17, 2017'));
 
 let listeCertifications: Array<Certification> = [certification, certification2];
 let stagiaire1: Stagiaire = new Stagiaire("N stagiaire 1", "P stagiaire 1", false, listeCertifications);
@@ -22,7 +22,7 @@ let formateur2: Formateur = new Formateur("Nom du 1er formateur", "Prénom du 1e
 let listeStagiaires: Array<Stagiaire> = [stagiaire1, stagiaire2];
 let listeFormateurs: Array<Formateur> = [formateur1, formateur2];
 
-let formation: Formation = new Formation("Une nouvelle formation", "03-04-2018", "29-06-2018", listeStagiaires, listeFormateurs);
+let formation: Formation = new Formation("Une nouvelle formation", new Date('April 3, 2018'), new Date('June 29, 2018'), listeStagiaires, listeFormateurs);
 
 describe("Formation", () => {
     it("Name should be Une nouvelle formation", () => {
@@ -30,11 +30,11 @@ describe("Formation", () => {
     });
 
     it("Date début should be 03-04-2018", () => {
-        assert.expect(formation.dateDebut).to.equal("03-04-2018");
+        assert.expect(formation.dateDebut.toDateString()).to.equal("Tue Apr 03 2018");
     });
 
     it("Date fin should be 29-06-2018", () => {
-        assert.expect(formation.dateFin).to.equal("29-06-2018");
+        assert.expect(formation.dateFin.toDateString()).to.equal("Fri Jun 29 2018");
     });
 
     it("Should have 2 Stagiaires", () => {
