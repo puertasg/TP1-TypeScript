@@ -1,5 +1,5 @@
 import { Certification } from "../classes/Certification";
-import * as assert from "chai"
+import * as assert from "chai";
 
 let certification: Certification = new Certification("Un diplôme", "2018");
 

@@ -1,5 +1,5 @@
 import { Boisson } from "../classes/Boisson";
-import * as assert from "chai"
+import * as assert from "chai";
 
 let boisson: Boisson = new Boisson("Verre d'eau", false, true);
 

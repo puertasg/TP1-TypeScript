@@ -1,5 +1,5 @@
 import { Connaissance } from "../classes/Connaissance";
-import * as assert from "chai"
+import * as assert from "chai";
 
 let connaissance: Connaissance = new Connaissance("Nouvelle connaissance", 3);
 

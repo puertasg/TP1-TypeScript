@@ -1,6 +1,6 @@
 import { Film } from "../classes/Film"
 import { Trailer } from "../classes/Trailer";
-import * as assert from "chai"
+import * as assert from "chai";
 
 let genre: string[] = ["Action and Adventure"]
 let actors: string[] = [
