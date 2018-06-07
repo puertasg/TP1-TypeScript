@@ -1,5 +1,6 @@
 import { Personne } from "./Personne";
 import { Religion } from "./Religion";
+import { Certification } from "./Certification";
 
 class Stagiaire extends Personne {
     private _listeCertifications: Array<Certification>;
