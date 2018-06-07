@@ -1,3 +1,5 @@
+import { Trailer } from "./Trailer";
+
 class Film {
     private _title: string;
     private _releasedate: string;
@@ -8,9 +10,9 @@ class Film {
     private _genre: string[];
     private _directors: string;
     private _actors: string[];
-    private _trailers: object[];
+    private _trailers: Array<Trailer>;
 
-    constructor(title: string, releasedate: string, studio: string, poster: string, location: string, rating: string, genre: string[], directors: string, actors: string[], trailers: object[]) {
+    constructor(title: string, releasedate: string, studio: string, poster: string, location: string, rating: string, genre: string[], directors: string, actors: string[], trailers: Array<Trailer>) {
         this._title = title;
         this._releasedate = releasedate;
         this._studio = studio;
@@ -22,7 +24,7 @@ class Film {
         this._actors = actors;
         this._trailers = trailers;
     }
-
+    
     /**
      * Getter title
      * @return {string}
@@ -97,9 +99,9 @@ class Film {
 
     /**
      * Getter trailers
-     * @return {object[]}
+     * @return {Array<Trailer>}
      */
-    public get trailers(): object[] {
+    public get trailers(): Array<Trailer> {
         return this._trailers;
     }
 
@@ -177,9 +179,9 @@ class Film {
 
     /**
      * Setter trailers
-     * @param {object[]} value
+     * @param {Array<Trailer>} value
      */
-    public set trailers(value: object[]) {
+    public set trailers(value: Array<Trailer>) {
         this._trailers = value;
     }
 }
