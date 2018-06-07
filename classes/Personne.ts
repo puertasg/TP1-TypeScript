@@ -64,7 +64,9 @@ class Personne {
     }
 
     boire(boisson: Boisson) {
-        console.log(`J'ai bu ${boisson.toString}`);
+        let msg = `J'ai bu ${boisson.toString()}`;
+        console.log(msg);
+        return msg;
     }
 
     toString(): string {
