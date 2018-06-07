@@ -34,7 +34,7 @@ describe("Formation", () => {
     });
 
     it("Date fin should be 29-06-2018", () => {
-        assert.expect(formation.dateDebut).to.equal("29-06-2018");
+        assert.expect(formation.dateFin).to.equal("29-06-2018");
     });
 
     it("Should have 2 Stagiaires", () => {
