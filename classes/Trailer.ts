@@ -4,7 +4,7 @@ class Trailer {
     private _type: string;
     private _exclusive: boolean;
     private _hd: boolean;
-    
+
     constructor(postdate: string, url: string, type: string, exclusive: boolean, hd: boolean) {
         this._postdate = postdate;
         this._url = url;
