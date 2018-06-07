@@ -1,11 +1,12 @@
 class Certification {
     private _nom: string;
-    private _anneeObtention: string;
+    private _anneeObtention: Date;
 
-    constructor(nom: string, anneeObtention: string) {
+    constructor(nom: string, anneeObtention: Date) {
         this._nom = nom;
         this._anneeObtention = anneeObtention;
     }
+
     /**
      * Getter nom
      * @return {string}
@@ -16,9 +17,9 @@ class Certification {
 
     /**
      * Getter anneeObtention
-     * @return {string}
+     * @return {Date}
      */
-    public get anneeObtention(): string {
+    public get anneeObtention(): Date {
         return this._anneeObtention;
     }
 
@@ -32,11 +33,12 @@ class Certification {
 
     /**
      * Setter anneeObtention
-     * @param {string} value
+     * @param {Date} value
      */
-    public set anneeObtention(value: string) {
+    public set anneeObtention(value: Date) {
         this._anneeObtention = value;
     }
+
 }
 
 export { Certification };

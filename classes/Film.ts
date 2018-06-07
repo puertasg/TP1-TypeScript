@@ -2,7 +2,7 @@ import { Trailer } from "./Trailer";
 
 class Film {
     private _title: string;
-    private _releasedate: string;
+    private _releasedate: Date;
     private _studio: string;
     private _poster: string;
     private _location: string;
@@ -12,7 +12,7 @@ class Film {
     private _actors: string[];
     private _trailers: Array<Trailer>;
 
-    constructor(title: string, releasedate: string, studio: string, poster: string, location: string, rating: string, genre: string[], directors: string, actors: string[], trailers: Array<Trailer>) {
+    constructor(title: string, releasedate: Date, studio: string, poster: string, location: string, rating: string, genre: string[], directors: string, actors: string[], trailers: Array<Trailer>) {
         this._title = title;
         this._releasedate = releasedate;
         this._studio = studio;
@@ -24,7 +24,6 @@ class Film {
         this._actors = actors;
         this._trailers = trailers;
     }
-    
     /**
      * Getter title
      * @return {string}
@@ -35,9 +34,9 @@ class Film {
 
     /**
      * Getter releasedate
-     * @return {string}
+     * @return {Date}
      */
-    public get releasedate(): string {
+    public get releasedate(): Date {
         return this._releasedate;
     }
 
@@ -115,9 +114,9 @@ class Film {
 
     /**
      * Setter releasedate
-     * @param {string} value
+     * @param {Date} value
      */
-    public set releasedate(value: string) {
+    public set releasedate(value: Date) {
         this._releasedate = value;
     }
 

@@ -1,22 +1,23 @@
 class Trailer {
-    private _postdate: string;
+    private _postdate: Date;
     private _url: string;
     private _type: string;
     private _exclusive: boolean;
     private _hd: boolean;
 
-    constructor(postdate: string, url: string, type: string, exclusive: boolean, hd: boolean) {
+    constructor(postdate: Date, url: string, type: string, exclusive: boolean, hd: boolean) {
         this._postdate = postdate;
         this._url = url;
         this._type = type;
         this._exclusive = exclusive;
         this._hd = hd;
     }
+
     /**
      * Getter postdate
-     * @return {string}
+     * @return {Date}
      */
-    public get postdate(): string {
+    public get postdate(): Date {
         return this._postdate;
     }
 
@@ -54,9 +55,9 @@ class Trailer {
 
     /**
      * Setter postdate
-     * @param {string} value
+     * @param {Date} value
      */
-    public set postdate(value: string) {
+    public set postdate(value: Date) {
         this._postdate = value;
     }
 
@@ -91,6 +92,7 @@ class Trailer {
     public set hd(value: boolean) {
         this._hd = value;
     }
+
 }
 
 

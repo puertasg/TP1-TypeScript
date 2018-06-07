@@ -3,18 +3,19 @@ import { Formateur } from "./Formateur";
 
 class Formation {
     private _nom: string;
-    private _dateDebut: string;
-    private _dateFin: string;
+    private _dateDebut: Date;
+    private _dateFin: Date;
     private _listeStagiaires: Array<Stagiaire>;
     private _listeFormateurs: Array<Formateur>;
 
-    constructor(nom: string, dateDebut: string, dateFin: string, listeStagiaires: Array<Stagiaire>, listeFormateurs: Array<Formateur>) {
+    constructor(nom: string, dateDebut: Date, dateFin: Date, listeStagiaires: Array<Stagiaire>, listeFormateurs: Array<Formateur>) {
         this._nom = nom;
         this._dateDebut = dateDebut;
         this._dateFin = dateFin;
         this._listeStagiaires = listeStagiaires;
         this._listeFormateurs = listeFormateurs;
     }
+    
     /**
      * Getter nom
      * @return {string}
@@ -25,17 +26,17 @@ class Formation {
 
     /**
      * Getter dateDebut
-     * @return {string}
+     * @return {Date}
      */
-    public get dateDebut(): string {
+    public get dateDebut(): Date {
         return this._dateDebut;
     }
 
     /**
      * Getter dateFin
-     * @return {string}
+     * @return {Date}
      */
-    public get dateFin(): string {
+    public get dateFin(): Date {
         return this._dateFin;
     }
 
@@ -65,17 +66,17 @@ class Formation {
 
     /**
      * Setter dateDebut
-     * @param {string} value
+     * @param {Date} value
      */
-    public set dateDebut(value: string) {
+    public set dateDebut(value: Date) {
         this._dateDebut = value;
     }
 
     /**
      * Setter dateFin
-     * @param {string} value
+     * @param {Date} value
      */
-    public set dateFin(value: string) {
+    public set dateFin(value: Date) {
         this._dateFin = value;
     }
 
