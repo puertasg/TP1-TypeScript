@@ -2,11 +2,11 @@ import { Formateur } from "../classes/Formateur";
 import { Connaissance } from "../classes/Connaissance";
 import * as assert from "chai";
 
-let connaissance = new Connaissance("Nouvelle connaissance", 0);
-let connaissanceAcquise = new Connaissance("Connaissance acquise", 4);
+let connaissance: Connaissance = new Connaissance("Nouvelle connaissance", 0);
+let connaissanceAcquise: Connaissance = new Connaissance("Connaissance acquise", 4);
 
-let listeConnaissances = [connaissance, connaissanceAcquise];
-let formateur = new Formateur("Nom du formateur", "Prénom du formateur", true, listeConnaissances);
+let listeConnaissances: Array<Connaissance> = [connaissance, connaissanceAcquise];
+let formateur: Formateur = new Formateur("Nom du formateur", "Prénom du formateur", true, listeConnaissances);
 
 describe("Formateur", () => {
     it("Name should be Nom du formateur", () => {

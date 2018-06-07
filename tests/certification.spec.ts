@@ -1,7 +1,7 @@
 import { Certification } from "../classes/Certification";
 import * as assert from "chai"
 
-let certification = new Certification("Un diplôme", "2018");
+let certification: Certification = new Certification("Un diplôme", "2018");
 
 describe("Certification", () => {
     it("Name should be Un diplôme", () => {

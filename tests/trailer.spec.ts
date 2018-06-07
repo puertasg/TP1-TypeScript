@@ -1,7 +1,7 @@
 import { Trailer } from "../classes/Trailer";
 import * as assert from "chai";
 
-let trailer = new Trailer("post date", "url ici", "type ici", true, false);
+let trailer: Trailer = new Trailer("post date", "url ici", "type ici", true, false);
 
 describe("Trailer", () => {
     it("Post date should be post date", () => {

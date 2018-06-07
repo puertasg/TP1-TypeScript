@@ -1,7 +1,7 @@
 import { Personne } from "../classes/Personne";
 import { Religion } from "../classes/Religion";
 import * as assert from "chai"
-let personne1 = new Personne("Nom personne", "Prénom personne", true, Religion.Atheist);
+let personne1: Personne = new Personne("Nom personne", "Prénom personne", true, Religion.Atheist);
 
 describe("Personne", () => {
     it("Name should be Nom personne", () => {

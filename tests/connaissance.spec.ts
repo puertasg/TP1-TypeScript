@@ -1,7 +1,7 @@
 import { Connaissance } from "../classes/Connaissance";
 import * as assert from "chai"
 
-let connaissance = new Connaissance("Nouvelle connaissance", 3);
+let connaissance: Connaissance = new Connaissance("Nouvelle connaissance", 3);
 
 describe("Connaissance", () => {
     it("Name should be Nouvelle connaissance", () => {

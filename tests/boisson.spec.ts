@@ -1,7 +1,7 @@
 import { Boisson } from "../classes/Boisson";
 import * as assert from "chai"
 
-let boisson = new Boisson("Verre d'eau", false, true);
+let boisson: Boisson = new Boisson("Verre d'eau", false, true);
 
 describe("Boisson", () => {
     it("Alchool flag should be false", () => {
