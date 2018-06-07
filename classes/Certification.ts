@@ -38,3 +38,5 @@ class Certification {
         this._anneeObtention = value;
     }
 }
+
+export { Certification };
