@@ -9,6 +9,21 @@ class Formateur extends Personne {
         super(nom, prenom, genre, religion);
         this._listeConnaissance = listeConnaissance
     }
+    /**
+     * Getter listeConnaissance
+     * @return {Array<Connaissance>}
+     */
+    public get listeConnaissance(): Array<Connaissance> {
+        return this._listeConnaissance;
+    }
+
+    /**
+     * Setter listeConnaissance
+     * @param {Array<Connaissance>} value
+     */
+    public set listeConnaissance(value: Array<Connaissance>) {
+        this._listeConnaissance = value;
+    }
 
     enseigner(): Array<Connaissance> {
         let connaissanceExp: Array<Connaissance> = this._listeConnaissance.filter(connaissance => connaissance.anneesExp > 2);
